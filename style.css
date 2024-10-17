@@ -104,7 +104,7 @@ header .navbar .navbar-nav a {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: hsl(54, 100%, 50%);
+  /* background-color: hsl(54, 100%, 50%); */
   transition: width 0.3s ease-in-out;
 }
 
