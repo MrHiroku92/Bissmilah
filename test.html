@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Horizontal</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background-color: ghostwhite;
+      }
+
+      /* CSS centering things
+    from here https://insertapps.com/blog/super-simpel-css-center-container/ 
+  */
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box-scroll {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 70%;
+        overflow: auto;
+        /* Hidden scroll bar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .box-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card {
+        display: inline-block;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      .ml {
+        margin-right: 10px;
+      }
+
+      img {
+        display: block;
+      }
+
+      p {
+        padding: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-scroll">
+        <div class="card ml">
+          <img src="img/11.jpg" alt="Text image" />
+          <p>Sneakers shoes for men</p>
+        </div>
+        <div class="card ml">
+          <img src="img/22.jpg" alt="Text image" />
+          <p>Product Title</p>
+        </div>
+        <div class="card ml">
+          <img src="img/33.jpg" alt="Text image" />
+          <p>Product Title</p>
+        </div>
+        <div class="card ml">
+          <img src="img/44.jpg" alt="Text image" />
+          <p>Product Title</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Declaring variable to target a div element
+      const mouseWheel = document.querySelector(".box-scroll");
+
+      // Add wheel function
+      mouseWheel.addEventListener("wheel", function (e) {
+        const race = 10; // <= set scroll mouse move the wheels
+
+        if (e.deltaY > 0)
+          // <= Scroll right
+          mouseWheel.scrollLeft += race;
+        // Scroll left
+        else mouseWheel.scrollLeft -= race;
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

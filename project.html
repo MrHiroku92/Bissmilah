@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link href="
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div id="nav-home" class="nav-home">
+          <a href="index.html" id="home"><i data-feather="home"></i></a>
+        </div>
+        <div id="navbar-nav" class="navbar-nav">
+          <a href="index.html">Home</a>
+          <a href="img-slider.html">Legalitas</a>
+          <a href="project.html">Our Project</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+
+        <div id="#" class="nav-menu">
+          <a href="" id="menu"><i data-feather="menu"></i></a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="slider">
+        <div class="slides" style="--img: url('img/project/project1.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project2.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project3.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project4.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project5.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project6.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project7.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project8.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project9.jpg')">
+          <div class="content"></div>
+        </div>
+        <div class="slides" style="--img: url('img/project/project10.jpg')">
+          <div class="content"></div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+      </div>
+    </div>
+    <script src="project.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  background-color: #000;
+  /* min-height: 3000px; */
+}
+/* CSS Header */
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid hsl(54, 100%, 50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+header .navbar figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar figure img {
+  width: 50px;
+}
+header .navbar figure figcaption {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+}
+header .navbar figure figcaption span {
+  color: hsl(54, 100%, 50%);
+}
+header .navbar .navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+header .navbar .navbar-nav a {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 1;
+  padding-top: 8px;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+.navbar .navbar-nav a:hover {
+  color: hsl(54, 100%, 50%);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(54, 100%, 50%);
+  transition: width 0.3s ease-in-out;
+}
+.navbar .navbar-nav a:hover::after {
+  width: 100%;
+}
+
+/* CSS Feather Icon */
+header .navbar .navbar-extra a {
+  color: #fff;
+}
+#home {
+  display: none;
+}
+header .navbar .nav-home a {
+  color: #fff;
+}
+header .navbar .nav-home a:hover {
+  color: hsl(54, 100%, 50%);
+}
+header .navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+header .navbar .navbar-extra a:hover {
+  color: hsl(54, 100%, 50%);
+}
+.about,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+.about h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.about h2 span,
+.contact h2 span {
+  color: hsl(54, 100%, 50%);
+}
+.about .row {
+  display: flex;
+}
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+.about .row .about-img img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.about .row .content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.6rem;
+}
+.about .content h3,
+p {
+  color: #fff;
+}
+/* contact section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  background-color: #222;
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6rem;
+}
+.contact h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #000;
+  border: 1px solid hsl(54, 100%, 78%);
+  border-radius: 10px;
+  padding-left: 2rem;
+}
+.contact .row form .input-group #icon {
+  color: #fff;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #000000;
+  background-color: hsl(54, 100%, 50%);
+  border-radius: 10px;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+.contact .row .map {
+  border-radius: 10px;
+  height: 30rem;
+}
+.contact .row form {
+  padding-top: 0;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: hsl(0, 0%, 39%);
+  text-align: center;
+  padding: 0.4rem 0;
+  margin-top: 3rem;
+}
+footer .socials a {
+  color: #ffffff;
+}
+footer .credit p {
+  font-size: 1rem;
+  color: #c2c2c2;
+}
+footer .credit p a {
+  font-size: 1rem;
+  color: #c2c2c2;
+}
+/* Mobile Breakpoint */
+@media (max-width: 1080px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 758px) {
+  html {
+    font-size: 75%;
+  }
+  header .navbar .navbar-nav {
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 20px;
+    top: 100%;
+    right: -100%;
+    width: 25rem;
+    height: 45vh;
+    background-color: #7c7c7c;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  header .navbar .navbar-nav.active {
+    display: block;
+    right: 0;
+  }
+  header .navbar .navbar-nav a {
+    display: block;
+    color: #000000;
+    font-size: 1.2rem;
+    padding: 15px 15px 10px 20px;
+    border-bottom: hsl(54, 100%, 50%);
+  }
+  .navbar .navbar-nav a:hover {
+    font-weight: 500;
+    font-size: large;
+  }
+  .navbar .navbar-nav a:hover::after {
+    width: 70%;
+  }
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 65%;
+  }
+  header .navbar .navbar-nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 25rem;
+    height: 30vh;
+    background-color: #7c7c7c;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  header .navbar .navbar-nav.active {
+    display: block;
+    right: 1rem;
+  }
+  header .navbar .navbar-nav a {
+    color: #000000;
+    font-size: 1.2rem;
+    padding: 15px 15px 10px 20px;
+    border-bottom: hsl(54, 100%, 50%);
+  }
+  .contact .row form .input-group input {
+    width: 70%;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    background: none;
+    color: #fff;
+  }
+  .contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: hsl(60, 3%, 40%);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

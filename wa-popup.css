@@ -1,0 +1,229 @@
+/* CSS Multiple Whatsapp Chat */
+#whatsapp-chat {
+  position: fixed;
+  background: #ffffff;
+  height: 320px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+  bottom: 90px;
+  right: 30px;
+  overflow: hidden;
+  z-index: 99999;
+  animation-name: showchat;
+  animation-duration: 1s;
+  transform: scale(1);
+}
+a.informasi {
+  text-decoration: unset;
+}
+a.informasi .info-chat {
+  display: inline-block;
+  margin-top: 10px;
+}
+a.sundakushow-chat {
+  background: linear-gradient(to right);
+  color: #4e4e4e;
+  position: fixed;
+  z-index: 99999;
+  bottom: 25px;
+  right: 30px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+}
+a.sundakushow-chat {
+  background: linear-gradient(-50deg, #57ee52, #e7ea3a, #20aadb, #23e0b3);
+  background-size: 300% 180%;
+  text-decoration: unset;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+a.sundakushow-chat i {
+  transform: scale(1.2);
+  margin: 0 10px 0 0;
+}
+.header-chat {
+  background: linear-gradient(to right top, #303254, #33b745);
+  color: #fff;
+  padding: 5px;
+}
+.header-chat h3 {
+  /* border: 1px solid #20aadb; */
+  font-size: 15px;
+  text-align: center;
+}
+.header-chat p {
+  font-size: 10px;
+  line-height: 1.7;
+  margin: 0;
+}
+.info-avatar {
+  position: relative;
+}
+.info-avatar img {
+  border-radius: 50%;
+  width: 70px;
+  float: left;
+}
+a.informasi {
+  margin: 10px;
+  padding: 5px;
+  display: block;
+  overflow: hidden;
+  animation-name: showhide;
+  animation-duration: 2.5s;
+  border-left: 3px solid #4cbe00;
+}
+a.informasi:hover {
+  background: #f1f1f1;
+}
+.info-chat span {
+  display: block;
+}
+#get-label,
+span.chat-label {
+  font-size: 10px;
+  color: #888;
+}
+#get-nama,
+span.chat-nama {
+  margin: 5px 0 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+}
+#get-label,
+#get-nama {
+  color: #fff;
+}
+.sundaku-msg {
+  color: #727272;
+  padding: 10px;
+  font-size: 0.7rem;
+  text-align: center;
+  border-top: 1px solid #797979;
+}
+textarea#chat-input {
+  border: none;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  height: 20px;
+  outline: none;
+  resize: none;
+}
+a#send-it {
+  color: #555;
+  width: 40px;
+  margin: -5px 0 0 5px;
+  font-weight: 700;
+  padding: 8px;
+  background: #eee;
+  border-radius: 10px;
+}
+.first-msg {
+  background: #f5f5f5;
+  padding: 30px;
+  text-align: center;
+}
+.first-msg span {
+  background: #e2e2e2;
+  color: #333;
+  font-size: 14.2px;
+  line-height: 1.7;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: inline-block;
+}
+.start-chat .sundaku-msg {
+  display: flex;
+}
+#get-number {
+  display: none;
+}
+a.close-chat {
+  text-decoration: unset;
+  position: absolute;
+  top: 0;
+  margin-top: -7px;
+  right: 15px;
+  color: #000000;
+  font-size: 30px;
+  /* border: 1px solid #db2020; */
+}
+@keyframes showhide {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes showchat {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  #whatsapp-chat {
+    width: auto;
+    left: 5%;
+    right: 5%;
+    font-size: 80%;
+  }
+  .sundaku-msg {
+    color: #727272;
+    padding: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+    border-top: 1px solid #797979;
+  }
+}
+.hide {
+  display: none;
+  animation-name: showhide;
+  animation-duration: 1.5s;
+  transform: scale(1);
+  opacity: 1;
+}
+.show {
+  display: block;
+  animation-name: showhide;
+  animation-duration: 1.5s;
+  transform: scale(1);
+  opacity: 1;
+}
